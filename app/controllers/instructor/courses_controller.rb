@@ -16,6 +16,8 @@ def create
   end
 
   def show
+    @section = Section.new
+    @lesson = Lesson.new
   end
 
   private
@@ -32,7 +34,9 @@ def create
   end
 
   def course_params
-    params.require(:course).permit(:title, :description, :cost)
+    params.require(:course).permit(:title, :description, :cost, :image)
   end
+
+
 
 end
